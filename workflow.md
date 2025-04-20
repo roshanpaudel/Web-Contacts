@@ -23,3 +23,6 @@ workflow.md
 
 1. Slide to unlock then go to app screen
 2. click on contact app icon to open the contact list
+3. show the spinner while fetching data from the api
+4. display contact list in the UI
+5. Search the user
