@@ -8,16 +8,16 @@ workflow.md
 2. push to github
 3. setup background and page layout
 4. Create Phone Screen UI
-   background
-   top part
 
-- slider
+   - background
+   - top part
+   - slider
 
 5. Create apps screen UI
 6. Create contact list scree UI
-   search bar
-   filter
-   Accordion
+   - search bar
+   - filter
+   - Accordion
 
 ## Functionalities
 
