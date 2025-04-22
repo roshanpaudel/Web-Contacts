@@ -1,23 +1,30 @@
-# 📇 Contact App
+# 📇 Contact App (Vanilla JS)
 
-A lightweight web app to manage contacts — add, edit, delete, and search easily.
+A simple contact manager built with pure HTML, CSS, and JavaScript. Add, edit, delete, and search contacts — all in a single file using LocalStorage.
 
-## 🧩 App Outline
+## ⚡ Features
 
-- **Add Contact**: Name, Email, Phone, Address
-- **Edit/Delete**: Modify or remove saved contacts
-- **Search**: Filter by name or email
-- **Storage**: LocalStorage or optional backend (Node.js + Express)
+- Add contacts (Name, Email, Phone)
+- Edit & delete entries
+- Live search filter
+- Data saved in browser (LocalStorage)
 
-## ⚙️ Tech Stack
+## 🧱 Technologies
 
-- HTML, CSS, JavaScript
-- Optional: Node.js + Express (Backend), MongoDB
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
-## 🚀 Getting Started
+## ▶️ Usage
 
-```bash
-git clone https://github.com/your-username/contact-app.git
-cd contact-app
-npm install        # (if backend is used)
-npm start          # or open index.html directly
+1. Clone or download the repo:
+    ```bash
+    git clone https://github.com/your-username/contact-app.git
+    ```
+
+2. Open `index.html` in your browser.
+
+That's it — no setup or install needed.
+
+## 📁 File Structure
+
