@@ -23,4 +23,22 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
+
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  /* hiding in diffrent browsers */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 50%;
+}
+/* //apply moz- */
