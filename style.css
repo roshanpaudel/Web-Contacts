@@ -7,3 +7,20 @@
   background: url(./bg.jpg) no-repeat center;
   background-size: cover;
 }
+.scroll-hidden {
+  overflow-y: auto; /* or scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.slider {
+  width: 100%;
+  /* hiding in diffrent browsers */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
