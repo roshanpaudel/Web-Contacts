@@ -60,9 +60,14 @@
   pointer-events: none;
 }
 
-@keyframes slideAnimation{
-  0%,100%{
+@keyframes slideAnimation {
+  0%,
+  100% {
     color: #000;
-    
+    filter: drop-shadow(0 0 10px purple);
+  }
+  50% {
+    color: purple;
+    filter: drop-shadow(0 0 10px purple);
   }
 }
