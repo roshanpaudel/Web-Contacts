@@ -58,6 +58,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+  animation: slideAnimation 3s ease-in-out infinite;
 }
 
 @keyframes slideAnimation {
