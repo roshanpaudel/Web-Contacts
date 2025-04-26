@@ -27,4 +27,4 @@ workflow.md
 4. display contact list in the UI
 5. Search the user
 
-The user provided a markdown file outlining a workflow for building a mobile UI with functionalities like unlocking, navigating to a contact list, fetching and displaying contacts from an API, and searching. The workflow is divided into UI building steps (setting up the project, creating the layout and specific screen UIs for the phone, apps, and contacts) and functionality implementation (handling screen transitions, API data display with a loading spinner, and contact searching). The user then asked for a concise version and subsequently a summary.
+Build a mobile UI with unlock, app navigation, contact list display from an API with search functionality.
