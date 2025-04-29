@@ -15,12 +15,6 @@ slider.addEventListener("change", (e) => {
 });
 
 const appScreenLoader = () => {
-  const homescreen = document.getElementsByClassName("homescreen");
-  console.log(homescreen); //returns HTMLCollection
-
-  //selects the first items of HTMLCollection that has same classname
-  homescreen[0].style.display = "none";
-
-  const appScreen = document.getElementsByClassName("appScreen");
-  appScreen[0].style.display = "";
+  document.querySelector(".homescreen").remove();
+  document.querySelector(".appScreen").style.display = "block";
 };
