@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
   background: url(./bg.jpg) no-repeat center;
   background-size: cover;
