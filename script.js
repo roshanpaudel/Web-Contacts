@@ -1,6 +1,7 @@
 //slider function to go to app screen
 const slider = document.getElementById("mySlider");
 const apiEP = "https://randomuser.me/api/";
+const userList = [];
 
 slider.addEventListener("change", (e) => {
   const { value } = e.target;
@@ -20,12 +21,27 @@ const appScreenLoader = () => {
   document.querySelector(".appScreen").style.display = "block";
 };
 
-const fetchUsers = (url) => {
+const fetchUsers = async (url) => {
   //fetch the user
 
-  // promise method
-  fetch(url);
+  // // promise method
+  // fetch(url)
+  //   .then((response) => {
+  //     console.log(response);
+  //     return response.json();
+  //   })
+  //   .then((data) => {
+  //     console.log(data);
+  //   })
+  //   .catch(() => {
+  //     console.log(error);
+  //   });
+
   //async await
+  const response = await fetch(url); //to call await function async must be defined
+  const data = await response.json();
+  userList = data.results;
+  console.log(userList);
 };
 
 fetchUsers(apiEP);
