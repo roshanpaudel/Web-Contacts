@@ -109,7 +109,7 @@ const displayList = (userList) => {
       </div>
       <div>
         <a
-          href="https://www.google.com/maps/place/${item.location.street.number}+${item.location.street.name}+${item.location.city}+${item.location.state}+${item.location.country}"
+          href="https://www.google.com.au/maps/search/${item.location.street.number}+${item.location.street.name},+${item.location.city},+${item.location.state},+${item.location.country}"
           target="_blank"
         >
           <i class="bi bi-globe-asia-australia me-1 text-center"></i>${item.location.street.number} ${item.location.street.name}, ${item.location.city},${item.location.country}</a
