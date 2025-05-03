@@ -19,6 +19,10 @@ slider.addEventListener("change", (e) => {
 const appScreenLoader = () => {
   document.querySelector(".homescreen").remove();
   document.querySelector(".appScreen").style.display = "block";
+  icon = document.querySelector(".icon-click");
+  icon.addEventListener("click", (e) => {
+    contactScreenLoader();
+  });
 };
 
 const fetchUsers = async (url) => {
@@ -49,8 +53,6 @@ const fetchUsers = async (url) => {
   //displays fetched and parsed data
   displayList(userList);
 };
-
-fetchUsers(apiEP);
 
 //display contact list
 const displayList = (userList) => {
@@ -149,3 +151,9 @@ addEventListener("keypress", (e) => {
   displayList(filteredUsers);
 });
 
+//display contact screen
+const contactScreenLoader = () => {
+  document.querySelector(".appScreen").remove();
+  document.querySelector(".contactListsScreen").style.display = "block";
+  fetchUsers(apiEP);
+};
