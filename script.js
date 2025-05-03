@@ -56,6 +56,8 @@ fetchUsers(apiEP);
 const displayList = (userList) => {
   const contactList = document.getElementById("list");
   contactList.style.display = "";
+  let userCount = userList.length;
+
   let str = "";
   //concatenates the list
   userList.map((item, i) => {
@@ -63,7 +65,7 @@ const displayList = (userList) => {
     str += `<div class="accordion-item">
   <h2 class="accordion-header">
     <button
-      class="accordion-button"
+      class="accordion-button collapsed"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#collapse${i}"
@@ -81,7 +83,7 @@ const displayList = (userList) => {
   </h2>
   <div
     id="collapse${i}"
-    class="accordion-collapse collapse show"
+    class="accordion-collapse collapse"
     data-bs-parent="#accordionExample"
   >
     <div
@@ -122,4 +124,28 @@ const displayList = (userList) => {
 
   //diplay the string in html
   document.getElementById("accordionExample").innerHTML = str;
+
+  // adding number of contatcts
+
+  let userCountHTML = document.getElementById("userCount");
+  if (userCount !== 1) {
+    userCountHTML.innerText = `${userCount} Contacts`;
+  } else {
+    userCountHTML.innerText = `${userCount} Contact`;
+  }
+  document.getElementById("userCount").innerText = `${userCount} Contact`;
 };
+
+//search contact
+document.getElementById("search");
+addEventListener("keypress", (e) => {
+  const { value } = e.target;
+
+  console.log(value);
+  const filteredUsers = userList.filter((item) => {
+    const name = (item.name.first + " " + item.name.last).toLowerCase();
+    return name.includes(value.toLowerCase());
+  });
+  displayList(filteredUsers);
+});
+

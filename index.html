@@ -44,7 +44,7 @@ button<!DOCTYPE html>
         <!-- homescreen -->
         <main
           class="homescreen h-100 p-3 position-relative"
-          style="display: none"
+          style="display: block"
         >
           <div
             class="slide-container bg-white p-3 rounded-4 shadow position-relative"
@@ -76,7 +76,7 @@ button<!DOCTYPE html>
         </div>
 
         <!-- contact list screen  -->
-        <main class="contactListsScreen" style="height: 95%">
+        <main class="contactListsScreen" style="height: 95%; display: none;">
           <div class="contactListContainer">
             <!-- title  -->
             <h2 class="p-2 fw-bolder text-white">Contacts</h2>
@@ -104,7 +104,7 @@ button<!DOCTYPE html>
             </div>
             <!-- contact list  -->
             <div id="list" class="bg-light pt-2" style="display: none">
-              <div class="p-2"><span id="userCount">10 </span>Contacts</div>
+              <div class="p-2"><span id="userCount"></div>
               <!-- accordion  -->
               <div class="accordion" id="accordionExample">
                 <!-- <div class="accordion-item">
