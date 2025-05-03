@@ -1,6 +1,6 @@
 //slider function to go to app screen
 const slider = document.getElementById("mySlider");
-const apiEP = "https://randomuser.me/api?results=2";
+const apiEP = "https://randomuser.me/api?results=5";
 let userList = [];
 
 slider.addEventListener("change", (e) => {
