@@ -66,21 +66,21 @@ const displayList = (userList) => {
       class="accordion-button"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#collapse${item.i}"
-      aria-expanded="true"
-      aria-controls="collapse${item.i}"
+      data-bs-target="#collapse${i}"
+      aria-expanded="false"
+      aria-controls="collapse${i}"
     >
       <img
       src=${item.picture.large}
       " alt="profile-pic" width="50px" class="rounded-circle"/>
       <div class="ms-4">
-        <div class="fw-bolder">Roshan Paudel</div>
-        <small>1 George street, Sydney</small>
+        <div class="fw-bolder">${item.name.first} ${item.name.last}</div>
+        <small>${item.location.street.number} ${item.location.street.name}, ${item.location.city}</small>
       </div>
     </button>
   </h2>
   <div
-    id="collapse${item.i}"
+    id="collapse${i}"
     class="accordion-collapse collapse show"
     data-bs-parent="#accordionExample"
   >
@@ -88,32 +88,31 @@ const displayList = (userList) => {
       class="accordion-body d-flex flex-column align-items-center"
     >
       <img
-      src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
+      src=${item.picture.large}
       " alt="profile-pic" width="150px" class="rounded-circle"/>
       <div>
         <div class="fw-bolder mt-2">
           <i class="bi bi-person-circle me-1"></i>
-          Roshan Paudel
+           ${item.name.title} ${item.name.first} ${item.name.last}
         </div>
       </div>
       <div>
-        <a href="tel:+0456398673"
-          ><i class="bi bi-phone-fill me-1"></i>0456398673</a
+        <a href="tel:${item.phone}"
+          ><i class="bi bi-phone-fill me-1"></i>${item.phone}</a
         >
       </div>
       <div>
-        <a href="mailto:xyz@gmail.com"
+        <a href="mailto:${item.email}"
           ><i class="bi bi-envelope-fill me-1"></i
-          >xyz@gmail.com</a
+          >${item.email}</a
         >
       </div>
       <div>
         <a
-          href="https://www.google.com/maps/place/1+George+St,+Sydney+NSW+2041"
+          href="https://www.google.com/maps/place/${item.location.street.number}+${item.location.street.name}+${item.location.city}+${item.location.state}+${item.location.country}"
           target="_blank"
         >
-          <i class="bi bi-globe-asia-australia me-1"></i>1
-          George Street, Sydney</a
+          <i class="bi bi-globe-asia-australia me-1 text-center"></i>${item.location.street.number} ${item.location.street.name}, ${item.location.city},${item.location.country}</a
         >
       </div>
     </div>
